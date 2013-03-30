@@ -6,7 +6,7 @@ BUILD_ROOT=`pwd`
 cd $BUILD_ROOT
 if [ -z "$debug" ]; then
     repo sync
-    . build/envsetup.sh
+    . build/resurrection_remix.sh
 fi
 
 BUILDN=

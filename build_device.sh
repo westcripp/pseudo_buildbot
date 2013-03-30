@@ -8,13 +8,13 @@ DATE=$(date +%h-%d-%y)
 LOG_DIR=logs
 BUILD_ROOT=`pwd`
 cd $BUILD_ROOT
-. build/envsetup.sh
+. build/resurrection_remix.sh
 lunch $1
 
 TARGET_VENDOR=$(echo $TARGET_PRODUCT | cut -f1 -d '_')
 
 # bacon check
-if [ "$(grep -m 1 bacon build/envsetup.sh)" = "" ]; then
+if [ "$(grep -m 1 bacon build/resurrection_remix.sh)" = "" ]; then
     echo "Y U NO MAKE BACON?!"
     BACON=false
 else
