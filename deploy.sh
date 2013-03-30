@@ -46,7 +46,7 @@ fi
 # find the ROM vendor from the manifest path for Pseudo
 ROM_VENDOR=$(grep pseudo_buildbot .repo/manifest.xml | cut -f4 -d ' ' | cut -f2 -d '/')
 
-# see if we are using a theme overlay or the ROM's vendorsetup
+# if we are using a theme overlay or the ROM's vendorsetup
 if [ "$THEME_VENDOR" != "" ]; then
     # using a theme overlay
     VENDOR="$THEME_VENDOR"
