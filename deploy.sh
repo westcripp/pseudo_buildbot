@@ -3,7 +3,7 @@
 BUILD_ROOT=`pwd`
 cd $BUILD_ROOT
 repo sync
-. build/envsetup.sh
+. build/resurrection_remix.sh
 
 # parse options
 while getopts ":c :o: :b: " opt
@@ -55,7 +55,7 @@ if [ ! -f vendor/$VENDOR/vendorsetup.sh ]; then
     exit 1
 fi
 
-# aokp_vzwtab-userdebug
+# rr_vzwtab-userdebug
 cat vendor/$VENDOR/vendorsetup.sh | cut -f2 -d ' ' > .bot_lunch
 
 # build packages
